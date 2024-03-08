@@ -1,0 +1,37 @@
+.hidden-imgs {
+    visibility: collapse;
+    width: 0%;
+    height: 0%;
+}
+
+img {
+    width: 400px;
+    height: 100%;
+    border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+.title {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.text {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.img-container {
+    margin-top: 2%;
+    display: flex;
+    align-items: normal;
+    justify-content: space-evenly;
+    height: 400px;
+}
