@@ -26,7 +26,7 @@ function remove_listener(event) {
 
     delIndex = 1 - i
 
-    if (counter == 3) {
+    if (counter == 11) {
 
         img.removeEventListener("click", remove_listener)
         imgs[delIndex].style.visibility = "hidden"
