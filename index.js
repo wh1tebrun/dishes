@@ -1,4 +1,6 @@
 
+counter = 0
+
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -21,19 +23,24 @@ window.onload = (e) => {
 function remove_listener(event) {
     img = event.currentTarget
     i = img._index
+
     delIndex = 1 - i
-    if (imgsrcs.length === 0) {
+
+    if (counter == 3) {
+
         img.removeEventListener("click", remove_listener)
         imgs[delIndex].style.visibility = "hidden"
 
-        
+
+
 
     }
     else {
         my_remove(delIndex)
-       
+        counter++
+
     }
-    
+
 
 }
 
