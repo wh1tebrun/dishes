@@ -26,7 +26,7 @@ function remove_listener(event) {
 
     delIndex = 1 - i
 
-    if (counter == 11) {
+    if (counter == output.innerHTML) {
 
         img.removeEventListener("click", remove_listener)
         imgs[delIndex].style.visibility = "hidden"
@@ -41,10 +41,24 @@ function remove_listener(event) {
 
     }
 
+    if (counter >= 1) {
+        document.getElementById("myRange").disabled = true;
+    }
+
 
 }
 
 for (const [i, img] of imgs.entries()) {
     img._index = i
     img.addEventListener("click", remove_listener)
-} 
+}
+
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function () {
+    output.innerHTML = this.value;
+}
