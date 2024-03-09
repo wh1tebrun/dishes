@@ -34,7 +34,7 @@ function remove_listener(event) {
 
     delIndex = 1 - i
 
-    if (counter == output.innerHTML) {
+    if (counter == output.innerHTML - 2) {
 
 
 
