@@ -13,7 +13,14 @@ html {
     scroll-behavior: smooth
 }
 
+.task-container {
 
+    margin-top: 1%;
+}
+
+.girlfriend-text {
+    margin-top: 1%;
+}
 
 canvas#confetti {
     position: fixed;
@@ -190,9 +197,8 @@ h2 {
     }
 
     .text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        display: inline;
     }
 
 
