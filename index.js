@@ -1,6 +1,14 @@
 
 counter = 0
 
+
+const canvas = document.querySelector('#confetti');
+
+const jsConfetti = new JSConfetti();
+
+
+
+
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -28,8 +36,13 @@ function remove_listener(event) {
 
     if (counter == output.innerHTML) {
 
+
+
         img.removeEventListener("click", remove_listener)
         imgs[delIndex].style.visibility = "hidden"
+        jsConfetti.addConfetti({
+            emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+        }).then(() => jsConfetti.addConfetti())
 
 
 
