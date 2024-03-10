@@ -16,54 +16,47 @@ function getRandomArbitrary(min, max) {
 imgs = Array.from(document.getElementsByTagName("img"))
 imgsrcs = Array.from(document.getElementsByClassName("hidden-imgs"))
 
-function my_remove(delIndex) {
-    rndNum = getRandomArbitrary(0, imgsrcs.length)
-    imgs[delIndex].src = imgsrcs[rndNum].src
-    imgsrcs.splice(rndNum, 1)
+// Function to replace the image source of the image at delIndex with a random image from imgsrcs
+// and then remove the used image source from imgsrcs
+function replaceAndRemoveImage(delIndex) {
+    const rndNum = Math.floor(getRandomArbitrary(0, imgsrcs.length));
+    imgs[delIndex].src = imgsrcs[rndNum].src;
+    imgsrcs.splice(rndNum, 1);
 }
 
-window.onload = (e) => {
-    my_remove(0)
-    my_remove(1)
-}
+// When the window loads, replace the first two images
+window.onload = () => {
+    replaceAndRemoveImage(0);
+    replaceAndRemoveImage(1);
+};
 
-function remove_listener(event) {
-    img = event.currentTarget
-    i = img._index
+// Event listener function for removing an image
+function removeImageListener(event) {
+    const img = event.currentTarget;
+    const i = img._index;
+    const delIndex = 1 - i;
 
-    delIndex = 1 - i
-
-    if (counter == output.innerHTML - 2) {
-
-
-
-        img.removeEventListener("click", remove_listener)
-        imgs[delIndex].style.visibility = "hidden"
+    if (counter == parseInt(output.innerHTML, 10) - 2) {
+        img.removeEventListener("click", removeImageListener);
+        imgs[delIndex].style.visibility = "hidden";
         jsConfetti.addConfetti({
             emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
-        }).then(() => jsConfetti.addConfetti())
-
-
-
-
-    }
-    else {
-        my_remove(delIndex)
-        counter++
-
+        }).then(() => jsConfetti.addConfetti());
+    } else {
+        replaceAndRemoveImage(delIndex);
+        counter++;
     }
 
     if (counter >= 1) {
         document.getElementById("myRange").disabled = true;
     }
-
-
 }
 
-for (const [i, img] of imgs.entries()) {
-    img._index = i
-    img.addEventListener("click", remove_listener)
-}
+// Adding the event listener to each image
+imgs.forEach((img, i) => {
+    img._index = i;
+    img.addEventListener("click", removeImageListener);
+});
 
 
 var slider = document.getElementById("myRange");
