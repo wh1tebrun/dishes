@@ -18,7 +18,6 @@ imgsrcs = Array.from(document.getElementsByClassName("hidden-imgs"))
 
 function my_remove(delIndex) {
     rndNum = getRandomArbitrary(0, imgsrcs.length)
-    console.log(`rndNum=${rndNum},${imgsrcs[rndNum]}`)
     imgs[delIndex].src = imgsrcs[rndNum].src
     imgsrcs.splice(rndNum, 1)
 }
@@ -74,4 +73,6 @@ output.innerHTML = slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
     output.innerHTML = this.value;
+
+
 }
