@@ -7,14 +7,16 @@ const canvas = document.querySelector('#confetti');
 const jsConfetti = new JSConfetti();
 
 
+var dishName = document.getElementById("dish-name");
 
-
+playAgainButtons = Array.from(document.getElementsByClassName("stats-btn__again"))
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
 imgs = Array.from(document.getElementsByTagName("img"))
 imgsrcs = Array.from(document.getElementsByClassName("hidden-imgs"))
+
 
 // Function to replace the image source of the image at delIndex with a random image from imgsrcs
 // and then remove the used image source from imgsrcs
@@ -36,12 +38,20 @@ function removeImageListener(event) {
     const i = img._index;
     const delIndex = 1 - i;
 
+    dishName.textContent = img.src.slice(29, -4).replaceAll("-", " ").toUpperCase()
+    console.log(dishName.textContent)
+
+
     if (counter == parseInt(output.innerHTML, 10) - 2) {
         img.removeEventListener("click", removeImageListener);
         imgs[delIndex].style.visibility = "hidden";
         jsConfetti.addConfetti({
             emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
         }).then(() => jsConfetti.addConfetti());
+
+        playAgainButtons[0].style.visibility = 'visible';
+
+
     } else {
         replaceAndRemoveImage(delIndex);
         counter++;

@@ -23,6 +23,16 @@ html {
     margin-top: 1%;
 }
 
+.result-dish {
+    margin-top: 1%;
+}
+
+#dish-name {
+    font-size: large;
+    color: rgb(170, 53, 53);
+
+}
+
 canvas#confetti {
     position: fixed;
     width: 100%;
@@ -151,11 +161,50 @@ h2 {
 }
 
 
+.stats-btn {
+    position: relative;
+}
+
+.stats-btn__inner {
+    margin: 0;
+    position: absolute;
+
+    left: 48%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.stats-btn__again {
+    visibility: hidden;
+
+
+
+
+    color: var(--text-white, #ececec);
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    height: 36px;
+    border-radius: 10px;
+    background: #3966D1;
+    border: none;
+}
+
+
+
+
 @media (max-width:623px) {
 
 
     .slidecontainer {
-        margin-top: 1%;
+
 
         width: fit-content;
         display: block;
@@ -185,11 +234,7 @@ h2 {
     }
 
 
-    .title {
 
-        margin-top: 1%;
-
-    }
 
     h1 {
         display: flex;
@@ -205,7 +250,7 @@ h2 {
 
 
     .img-container {
-        margin-top: 1%;
+
         display: flex;
         align-items: normal;
         justify-content: center;
@@ -237,7 +282,7 @@ h2 {
 
 @media (min-width:624px) and (max-width:870px) {
     .slidecontainer {
-        margin-top: 1%;
+
 
         width: fit-content;
         display: block;
@@ -269,11 +314,7 @@ h2 {
     }
 
 
-    .title {
 
-        margin-top: 1%;
-
-    }
 
     h1 {
         display: flex;
@@ -289,7 +330,7 @@ h2 {
 
 
     .img-container {
-        margin-top: 1%;
+
         display: flex;
         align-items: normal;
         justify-content: center;
@@ -318,7 +359,7 @@ h2 {
 
 @media only screen and (orientation: landscape) {
     .slidecontainer {
-        margin-top: 1%;
+
 
         width: fit-content;
         display: block;
@@ -350,11 +391,6 @@ h2 {
     }
 
 
-    .title {
-
-        margin-top: 1%;
-
-    }
 
     h1 {
         display: flex;
@@ -370,7 +406,7 @@ h2 {
 
 
     .img-container {
-        margin-top: 1%;
+
         display: flex;
         align-items: normal;
         justify-content: center;
