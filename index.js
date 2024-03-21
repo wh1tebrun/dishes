@@ -18,20 +18,25 @@ function getRandomArbitrary(min, max) {
 imgs = Array.from(document.getElementsByTagName("img"))
 vegan = Array.from(document.getElementsByClassName("hidden-imgs-1"))
 fleisch = Array.from(document.getElementsByClassName("hidden-imgs-3"))
-imgsrcs = vegan.concat(fleisch)
+
 
 
 function foodTypeListener(event) {
 
-    if (event.currentTarget === button1) {
+    if (event.currentTarget.src.slice(43, -4).replaceAll("-", " ").toUpperCase() === "VEGAN") {
+
+        imgsrcs = vegan
 
     }
 
-    else if (event.currentTarget === button2) {
+    else if (event.currentTarget.src.slice(43, -4).replaceAll("-", " ").toUpperCase() === "VEGETARISCH") {
+
+        imgsrcs = vegan
 
     }
 
     else {
+        imgsrcs = fleisch.concat(vegan)
 
     }
 }
@@ -89,6 +94,9 @@ imgs.forEach((img, i) => {
     img._index = i;
     img.addEventListener("click", removeImageListener);
 });
+
+button1.addEventListener("click", foodTypeListener)
+button2.addEventListener("click", foodTypeListener)
 
 
 var slider = document.getElementById("myRange");
