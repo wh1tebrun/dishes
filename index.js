@@ -23,6 +23,7 @@ function getRandomArbitrary(min, max) {
 imgs = Array.from(document.getElementsByTagName("img"))
 imgs = imgs.slice(2)
 vegan = Array.from(document.getElementsByClassName("hidden-imgs-3"))
+vegetarisch = Array.from(document.getElementsByClassName("hidden-imgs-2"))
 fleisch = Array.from(document.getElementsByClassName("hidden-imgs-1"))
 imgsrcs = fleisch.concat(vegan)
 
@@ -41,7 +42,6 @@ function downButton1() {
     if (buttonCounter1 < 1 && buttonCounter2 < 1) {
 
         imgsrcs = vegan
-        console.log("clicked")
         buttons[0].style.backgroundColor = "#6fffca83";
         buttonCounter1++
     }
@@ -58,7 +58,6 @@ function downButton1() {
 
     }
 
-    console.log(imgsrcs)
 
 }
 function downButton2() {
@@ -66,7 +65,6 @@ function downButton2() {
     if (buttonCounter2 < 1 && buttonCounter1 < 1) {
 
         imgsrcs = vegan
-        console.log("clicked")
         buttons[1].style.backgroundColor = "#6fffca83";
         buttonCounter2++
     }
@@ -82,7 +80,6 @@ function downButton2() {
 
     }
 
-    console.log(imgsrcs)
 }
 
 
