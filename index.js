@@ -8,6 +8,9 @@ const jsConfetti = new JSConfetti();
 const button1 = document.querySelector("food-logo-1");
 const button2 = document.querySelector("food-logo-2");
 
+
+buttons = [button1, button2]
+
 var dishName = document.getElementById("dish-name");
 
 playAgainButtons = Array.from(document.getElementsByClassName("stats-btn__again"))
@@ -16,30 +19,10 @@ function getRandomArbitrary(min, max) {
 }
 
 imgs = Array.from(document.getElementsByTagName("img"))
+imgs = imgs.slice(2)
 vegan = Array.from(document.getElementsByClassName("hidden-imgs-1"))
 fleisch = Array.from(document.getElementsByClassName("hidden-imgs-3"))
 imgsrcs = fleisch.concat(vegan)
-
-
-function foodTypeListener(event) {
-
-    if (event.currentTarget.src.slice(43, -4).replaceAll("-", " ").toUpperCase() === "VEGAN") {
-
-        imgsrcs = vegan
-        console.log(event.currentTarget)
-
-    }
-
-    else if (event.currentTarget.src.slice(43, -4).replaceAll("-", " ").toUpperCase() === "VEGETARISCH") {
-
-        imgsrcs = vegan
-        console.log(event.currentTarget)
-    }
-
-
-}
-
-
 
 
 
@@ -56,6 +39,8 @@ window.onload = () => {
     replaceAndRemoveImage(0);
     replaceAndRemoveImage(1);
 };
+
+
 
 // Event listener function for removing an image
 function removeImageListener(event) {
@@ -94,8 +79,10 @@ imgs.forEach((img, i) => {
 
 });
 
-button1.addEventListener("click", foodTypeListener);
-button2.addEventListener("click", foodTypeListener);
+
+
+
+
 
 
 var slider = document.getElementById("myRange");
