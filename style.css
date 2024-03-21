@@ -11,11 +11,20 @@
 
 
 
-.food-logo {
+.food-logo-1 {
     width: 3%;
     display: flex;
-    margin-left: 2px;
     align-items: center;
+    padding: 0;
+
+
+}
+
+.food-logo-2 {
+    width: 3%;
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
 .type-food {

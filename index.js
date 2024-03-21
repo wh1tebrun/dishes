@@ -5,7 +5,8 @@ counter = 0
 const canvas = document.querySelector('#confetti');
 
 const jsConfetti = new JSConfetti();
-
+const button1 = document.querySelector("food-logo-1");
+const button2 = document.querySelector("food-logo-2");
 
 var dishName = document.getElementById("dish-name");
 
@@ -17,7 +18,24 @@ function getRandomArbitrary(min, max) {
 imgs = Array.from(document.getElementsByTagName("img"))
 vegan = Array.from(document.getElementsByClassName("hidden-imgs-1"))
 fleisch = Array.from(document.getElementsByClassName("hidden-imgs-3"))
-imgsrcs = vegan
+imgsrcs = vegan.concat(fleisch)
+
+
+function foodTypeListener(event) {
+
+    if (event.currentTarget === button1) {
+
+    }
+
+    else if (event.currentTarget === button2) {
+
+    }
+
+    else {
+
+    }
+}
+
 
 
 
