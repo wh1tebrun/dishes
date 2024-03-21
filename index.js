@@ -93,10 +93,11 @@ function removeImageListener(event) {
 imgs.forEach((img, i) => {
     img._index = i;
     img.addEventListener("click", removeImageListener);
+
 });
 
-button1.addEventListener("click", foodTypeListener)
-button2.addEventListener("click", foodTypeListener)
+button1.addEventListener("click", foodTypeListener);
+button2.addEventListener("click", foodTypeListener);
 
 
 var slider = document.getElementById("myRange");
