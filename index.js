@@ -18,7 +18,7 @@ function getRandomArbitrary(min, max) {
 imgs = Array.from(document.getElementsByTagName("img"))
 vegan = Array.from(document.getElementsByClassName("hidden-imgs-1"))
 fleisch = Array.from(document.getElementsByClassName("hidden-imgs-3"))
-
+imgsrcs = fleisch.concat(vegan)
 
 
 function foodTypeListener(event) {
@@ -26,19 +26,17 @@ function foodTypeListener(event) {
     if (event.currentTarget.src.slice(43, -4).replaceAll("-", " ").toUpperCase() === "VEGAN") {
 
         imgsrcs = vegan
+        console.log(event.currentTarget)
 
     }
 
     else if (event.currentTarget.src.slice(43, -4).replaceAll("-", " ").toUpperCase() === "VEGETARISCH") {
 
         imgsrcs = vegan
-
+        console.log(event.currentTarget)
     }
 
-    else {
-        imgsrcs = fleisch.concat(vegan)
 
-    }
 }
 
 
