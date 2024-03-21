@@ -14,7 +14,7 @@
 
 
 .food-logo {
-    width: 3%;
+    width: 10%;
     display: flex;
     align-items: center;
     padding: 0;
@@ -307,6 +307,15 @@ h2 {
 }
 
 @media (min-width:624px) and (max-width:870px) {
+
+    
+.food-logo {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: rgba(255, 127, 80, 0);
+}
     .slidecontainer {
 
 
@@ -390,6 +399,15 @@ h2 {
 }
 
 @media only screen and (orientation: landscape) {
+
+    
+.food-logo {
+    width: 3%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: rgba(255, 127, 80, 0);
+}
     .slidecontainer {
 
 
