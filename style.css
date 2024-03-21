@@ -9,6 +9,23 @@
     font-family: "Montserrat", sans-serif
 }
 
+
+
+.food-logo {
+    width: 3%;
+    display: flex;
+    margin-left: 2px;
+    align-items: center;
+}
+
+.type-food {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    overflow: hidden
+}
+
+
 html {
 
     scroll-behavior: smooth
@@ -219,7 +236,13 @@ h2 {
 
     }
 
-    .hidden-imgs {
+    .hidden-imgs-1 {
+        visibility: collapse;
+        width: 0%;
+        height: 0%;
+    }
+
+    .hidden-imgs-3 {
         visibility: collapse;
         width: 0%;
         height: 0%;
@@ -297,7 +320,13 @@ h2 {
 
     }
 
-    .hidden-imgs {
+    .hidden-imgs-1 {
+        visibility: collapse;
+        width: 0%;
+        height: 0%;
+    }
+
+    .hidden-imgs-3 {
         visibility: collapse;
         width: 0%;
         height: 0%;
@@ -374,7 +403,15 @@ h2 {
 
     }
 
-    .hidden-imgs {
+
+    .hidden-imgs-1 {
+        visibility: collapse;
+        width: 0%;
+        height: 0%;
+    }
+
+
+    .hidden-imgs-3 {
         visibility: collapse;
         width: 0%;
         height: 0%;

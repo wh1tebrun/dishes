@@ -15,7 +15,11 @@ function getRandomArbitrary(min, max) {
 }
 
 imgs = Array.from(document.getElementsByTagName("img"))
-imgsrcs = Array.from(document.getElementsByClassName("hidden-imgs"))
+vegan = Array.from(document.getElementsByClassName("hidden-imgs-1"))
+fleisch = Array.from(document.getElementsByClassName("hidden-imgs-3"))
+imgsrcs = vegan
+
+
 
 
 // Function to replace the image source of the image at delIndex with a random image from imgsrcs
