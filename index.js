@@ -1,15 +1,17 @@
 
 counter = 0
-
+buttonCounter1 = 0
+buttonCounter2 = 0
 
 const canvas = document.querySelector('#confetti');
 
 const jsConfetti = new JSConfetti();
-const button1 = document.querySelector("food-logo-1");
-const button2 = document.querySelector("food-logo-2");
 
 
-buttons = [button1, button2]
+
+buttons = Array.from(document.getElementsByClassName("food-logo"))
+
+
 
 var dishName = document.getElementById("dish-name");
 
@@ -20,9 +22,70 @@ function getRandomArbitrary(min, max) {
 
 imgs = Array.from(document.getElementsByTagName("img"))
 imgs = imgs.slice(2)
-vegan = Array.from(document.getElementsByClassName("hidden-imgs-1"))
-fleisch = Array.from(document.getElementsByClassName("hidden-imgs-3"))
+vegan = Array.from(document.getElementsByClassName("hidden-imgs-3"))
+fleisch = Array.from(document.getElementsByClassName("hidden-imgs-1"))
 imgsrcs = fleisch.concat(vegan)
+
+
+
+
+buttons[0].addEventListener('click', downButton1)
+buttons[1].addEventListener('click', downButton2)
+
+
+
+
+
+function downButton1() {
+
+    if (buttonCounter1 < 1 && buttonCounter2 < 1) {
+
+        imgsrcs = vegan
+        console.log("clicked")
+        buttons[0].style.backgroundColor = "#6fffca83";
+        buttonCounter1++
+    }
+
+    else {
+        imgsrcs = fleisch.concat(vegan)
+        buttons[0].style.backgroundColor = "#fff"
+        buttonCounter1--
+
+        if (buttonCounter1 < 0) {
+            buttonCounter1 = 0
+        }
+
+
+    }
+
+    console.log(imgsrcs)
+
+}
+function downButton2() {
+
+    if (buttonCounter2 < 1 && buttonCounter1 < 1) {
+
+        imgsrcs = vegan
+        console.log("clicked")
+        buttons[1].style.backgroundColor = "#6fffca83";
+        buttonCounter2++
+    }
+
+    else {
+        imgsrcs = fleisch.concat(vegan)
+        buttons[1].style.backgroundColor = "#fff"
+        buttonCounter2--
+
+        if (buttonCounter2 < 0) {
+            buttonCounter2 = 0
+        }
+
+    }
+
+    console.log(imgsrcs)
+}
+
+
 
 
 
