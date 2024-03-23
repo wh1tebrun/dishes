@@ -2,6 +2,7 @@
 counter = 0
 buttonCounter1 = 0
 buttonCounter2 = 0
+refreshCounter = 0
 
 const canvas = document.querySelector('#confetti');
 
@@ -25,7 +26,7 @@ imgs = imgs.slice(2)
 vegan = Array.from(document.getElementsByClassName("hidden-imgs-3"))
 vegetarisch = Array.from(document.getElementsByClassName("hidden-imgs-2"))
 fleisch = Array.from(document.getElementsByClassName("hidden-imgs-1"))
-imgsrcs = fleisch.concat(vegan)
+imgsrcs = fleisch.concat(vegan).concat(vegetarisch)
 
 
 
@@ -44,6 +45,9 @@ function downButton1() {
         imgsrcs = vegan
         buttons[0].style.backgroundColor = "#6fffca83";
         buttonCounter1++
+        replaceAndRemoveImage(0);
+        replaceAndRemoveImage(1);
+        refreshCounter++
     }
 
     else {
@@ -58,15 +62,22 @@ function downButton1() {
 
     }
 
+    if (refreshCounter === 3) {
+        location.reload();
+    }
+
 
 }
 function downButton2() {
 
     if (buttonCounter2 < 1 && buttonCounter1 < 1) {
 
-        imgsrcs = vegan
+        imgsrcs = vegetarisch
         buttons[1].style.backgroundColor = "#6fffca83";
         buttonCounter2++
+        replaceAndRemoveImage(0);
+        replaceAndRemoveImage(1);
+        refreshCounter++
     }
 
     else {
@@ -74,10 +85,15 @@ function downButton2() {
         buttons[1].style.backgroundColor = "#fff"
         buttonCounter2--
 
+
         if (buttonCounter2 < 0) {
             buttonCounter2 = 0
         }
 
+    }
+
+    if (refreshCounter === 3) {
+        location.reload();
     }
 
 }
@@ -129,6 +145,8 @@ function removeImageListener(event) {
 
     if (counter >= 1) {
         document.getElementById("myRange").disabled = true;
+        buttons[0].removeEventListener("click", downButton1);
+        buttons[1].removeEventListener("click", downButton2);
     }
 }
 
