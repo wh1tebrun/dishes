@@ -30,6 +30,7 @@ imgsrcs = fleisch.concat(vegan).concat(vegetarisch)
 
 
 
+console.log(fleisch[1].src)
 
 buttons[0].addEventListener('click', downButton1)
 buttons[1].addEventListener('click', downButton2)
