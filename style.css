@@ -258,7 +258,7 @@ h2 {
     }
 
     .img-container img {
-        width: 140px;
+        width: 120px;
         height: 140px;
         border: 1px solid black;
 
@@ -417,7 +417,7 @@ h2 {
 
 }
 
-@media (min-width:871px) and (max-width:1200px) {
+@media (min-width:871px) and (max-width:1500px) {
 
     .food-logo {
         width: 5%;
@@ -543,7 +543,7 @@ h2 {
 
 
     .img-container img {
-        width: 350px;
+        width: 410px;
         height: 350px;
         border: 1px solid black;
 
