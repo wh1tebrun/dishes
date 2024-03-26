@@ -23,14 +23,108 @@ function getRandomArbitrary(min, max) {
 
 imgs = Array.from(document.getElementsByTagName("img"))
 imgs = imgs.slice(2)
-vegan = Array.from(document.getElementsByClassName("hidden-imgs-3"))
-vegetarisch = Array.from(document.getElementsByClassName("hidden-imgs-2"))
-fleisch = Array.from(document.getElementsByClassName("hidden-imgs-1"))
+vegetarisch = ["https://girlfriend-two.vercel.app/images/Linguine-allo-scoglio.jpg",
+    "https://girlfriend-two.vercel.app/images/Escondidinho.jpg",
+    "https://girlfriend-two.vercel.app/images/Gambas-al-ajillo.jpg",
+    "https://girlfriend-two.vercel.app/images/Phanaeng-Curry.jpg",
+    "https://girlfriend-two.vercel.app/images/Mechouia-Salad.jpg",
+    "https://girlfriend-two.vercel.app/images/hummus.jpg",
+    "https://girlfriend-two.vercel.app/images/Esquites.jpg",
+    "https://girlfriend-two.vercel.app/images/Chateaubriand.jpg",
+    "https://girlfriend-two.vercel.app/images/valassky-frgal.jpg",
+    "https://girlfriend-two.vercel.app/images/Pasta-carbonara.jpg",
+    "https://girlfriend-two.vercel.app/images/Otoro-nigiri-sushi.jpg",
+    "https://girlfriend-two.vercel.app/images/Peruvian-roast-chicken.jpg",
+    "https://girlfriend-two.vercel.app/images/tiramisu.jpg",
+    "https://girlfriend-two.vercel.app/images/Phat-kaphrao.jpg",
+    "https://girlfriend-two.vercel.app/images/Guacamole.jpg",
+    "https://girlfriend-two.vercel.app/images/Leche-de-tigre.jpg",
+    "https://girlfriend-two.vercel.app/images/Frozen-custard.jpg",
+    "https://girlfriend-two.vercel.app/images/Giouvetsi.jpg",
+    "https://girlfriend-two.vercel.app/images/Lasagne-alla-Bolognese.jpg",
+    "https://girlfriend-two.vercel.app/images/Manti.jpg",
+    "https://girlfriend-two.vercel.app/images/Dan-Dan-noodles.jpg",
+    "https://girlfriend-two.vercel.app/images/Tagliatelle-al-ragu-alla-Bolognese.jpg",
+    "https://girlfriend-two.vercel.app/images/Dulce-de-leche.jpg",
+    "https://girlfriend-two.vercel.app/images/Milanesa-napolitana.jpg",
+    "https://girlfriend-two.vercel.app/images/mercimek-corbasi.jpg",
+    "https://girlfriend-two.vercel.app/images/Kladdkaka.jpg",
+    "https://girlfriend-two.vercel.app/images/Espetada.jpg",
+    "https://girlfriend-two.vercel.app/images/Tombik-Doner.jpg",
+    "https://girlfriend-two.vercel.app/images/Steak-au-poivre.jpg",
+    "https://girlfriend-two.vercel.app/images/Pasta-alla-gricia.jpg",
+    "https://girlfriend-two.vercel.app/images/Tonkotsu-ramen.jpg",
+    "https://girlfriend-two.vercel.app/images/Enchiladas-Suizas.jpg",
+    "https://girlfriend-two.vercel.app/images/Saganaki.jpg",
+    "https://girlfriend-two.vercel.app/images/Medovik.jpg",
+    "https://girlfriend-two.vercel.app/images/Provoleta.jpg",
+    "https://girlfriend-two.vercel.app/images/Carnitas.jpg",
+    "https://girlfriend-two.vercel.app/images/Tinginys.jpg",
+    "https://girlfriend-two.vercel.app/images/Koldunai.jpg",
+    "https://girlfriend-two.vercel.app/images/Piadina-Romagnola.jpg",
+    "https://girlfriend-two.vercel.app/images/Greek-salad.jpg",
+    "https://girlfriend-two.vercel.app/images/Paidakia.jpg",
+    "https://girlfriend-two.vercel.app/images/Salmon-Soup.jpg",
+    "https://girlfriend-two.vercel.app/images/cochinita-pibil.jpg",
+    "https://girlfriend-two.vercel.app/images/Mutabal.jpg",
+    "https://girlfriend-two.vercel.app/images/Gelato-al-pistacchio.jpg",
+    "https://girlfriend-two.vercel.app/images/Chilaquiles.jpg",
+    "https://girlfriend-two.vercel.app/images/Coxinha.jpg",
+    "https://girlfriend-two.vercel.app/images/Gyoza.jpg"]
+fleisch = ["dondurma.jpg",
+    "https://girlfriend-two.vercel.app/images/Pan-de-bono.jpg",
+    "https://girlfriend-two.vercel.app/images/Tom-kha-gai.jpg",
+    "https://girlfriend-two.vercel.app/images/Picanha.jpg",
+    "https://girlfriend-two.vercel.app/images/Focaccia-alla-Genovese.jpg",
+    "https://girlfriend-two.vercel.app/images/Souffle-au-chocolat.jpg",
+    "https://girlfriend-two.vercel.app/images/Pappardelle-al-cinghiale.jpg",
+    "https://girlfriend-two.vercel.app/images/Pozole.jpg",
+    "https://girlfriend-two.vercel.app/images/Peking-duck.jpg",
+    "https://girlfriend-two.vercel.app/images/Hyderabadi-biryani.jpg",
+    "https://girlfriend-two.vercel.app/images/Fritto-misto.jpg",
+    "https://girlfriend-two.vercel.app/images/Pao-de-queijo.jpg",
+    "https://girlfriend-two.vercel.app/images/Ameijoas-a-Bulhao-Pato.jpg",
+    "https://girlfriend-two.vercel.app/images/Tikka.jpg",
+    "https://girlfriend-two.vercel.app/images/Sernik.jpg",
+    "https://girlfriend-two.vercel.app/images/sarma.jpg",
+    "https://girlfriend-two.vercel.app/images/Mixed-ceviche.jpg",
+    "https://girlfriend-two.vercel.app/images/Carne-de-porco-a-Alentejana.jpg",
+    "https://girlfriend-two.vercel.app/images/Kapustnica.jpg",
+    "https://girlfriend-two.vercel.app/images/Kaiserschmarrn.jpg",
+    "https://girlfriend-two.vercel.app/images/Butter-Garlic-Naan.jpg",
+    "https://girlfriend-two.vercel.app/images/Roti-canai.jpg",
+    "https://girlfriend-two.vercel.app/images/Guotie.jpg",
+    "https://girlfriend-two.vercel.app/images/Jianbing.jpg",
+    "https://girlfriend-two.vercel.app/images/Poke.jpg",
+    "https://girlfriend-two.vercel.app/images/Hunkar-begendi.jpg",
+    "https://girlfriend-two.vercel.app/images/Frango-assado-com-piri-piri.jpg",
+    "https://girlfriend-two.vercel.app/images/baguette.jpg",
+    "https://girlfriend-two.vercel.app/images/Boiled-Maine-Lobster.jpg",
+    "https://girlfriend-two.vercel.app/images/ravioli.jpg",
+    "https://girlfriend-two.vercel.app/images/Kleftiko.jpg",
+    "https://girlfriend-two.vercel.app/images/Pecena-kachna.jpg",
+    "https://girlfriend-two.vercel.app/images/Dakos.jpg",
+    "https://girlfriend-two.vercel.app/images/Pernil.jpg"]
+
+vegan = [
+    "https://girlfriend-two.vercel.app/images/Chicken-65.jpg",
+    "https://girlfriend-two.vercel.app/images/Beef-pho.jpg",
+    "https://girlfriend-two.vercel.app/images/Carne-asada-tacos.jpg",
+    "https://girlfriend-two.vercel.app/images/Pizza-Napoletana.jpg",
+    "https://girlfriend-two.vercel.app/images/Creme-brulee.jpg",
+    "https://girlfriend-two.vercel.app/images/Cesnecka.jpg",
+    "https://girlfriend-two.vercel.app/images/Shashlik.jpg",
+    "https://girlfriend-two.vercel.app/images/khinkali.jpg",
+    "https://girlfriend-two.vercel.app/images/Samgyeopsal.jpg",
+    "https://girlfriend-two.vercel.app/images/Panzerotti.jpg",
+    "https://girlfriend-two.vercel.app/images/Tzatziki.jpg",
+    "https://girlfriend-two.vercel.app/images/quesadilla.jpg",
+    "https://girlfriend-two.vercel.app/images/Gravlax.jpg",
+    "https://girlfriend-two.vercel.app/images/Parmigiana-alla-napoletana.jpg",
+    "https://girlfriend-two.vercel.app/images/Bistecca-alla-Fiorentina.jpg",
+    "https://girlfriend-two.vercel.app/images/Raclette.jpg"
+]
 imgsrcs = fleisch.concat(vegan).concat(vegetarisch)
-
-
-
-console.log(fleisch[1].src)
 
 buttons[0].addEventListener('click', downButton1)
 buttons[1].addEventListener('click', downButton2)
@@ -107,7 +201,7 @@ function downButton2() {
 // and then remove the used image source from imgsrcs
 function replaceAndRemoveImage(delIndex) {
     const rndNum = Math.floor(getRandomArbitrary(0, imgsrcs.length));
-    imgs[delIndex].src = imgsrcs[rndNum].src;
+    imgs[delIndex] = imgsrcs[rndNum];
     imgsrcs.splice(rndNum, 1);
 }
 
