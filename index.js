@@ -10,7 +10,7 @@ const jsConfetti = new JSConfetti();
 
 
 
-buttons = Array.from(document.getElementsByClassName("food-logo"))
+
 
 
 
@@ -130,6 +130,8 @@ vegan = [
 ]
 imgsrcs = fleisch.concat(vegan).concat(vegetarisch)
 
+
+buttons = Array.from(document.getElementsByClassName("food-logo"))
 buttons[0].addEventListener('click', downButton1)
 buttons[1].addEventListener('click', downButton2)
 
