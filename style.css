@@ -199,9 +199,6 @@ h2 {
 }
 
 
-.stats-btn {
-    position: relative;
-}
 
 .stats-btn__inner {
     margin: 0;
@@ -220,7 +217,6 @@ h2 {
 
     color: var(--text-white, #ececec);
     text-align: center;
-    font-family: Ubuntu;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -233,12 +229,21 @@ h2 {
     border-radius: 10px;
     background: #3966D1;
     border: none;
+
 }
 
 
 
 
 @media (max-width:623px) {
+    .stats-btn__inner {
+        margin: 0;
+        position: absolute;
+
+        left: 44%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 
 
     .slidecontainer {
@@ -323,6 +328,15 @@ h2 {
 }
 
 @media (min-width:624px) and (max-width:870px) {
+
+    .stats-btn__inner {
+        margin: 0;
+        position: absolute;
+    
+        left: 46%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 
 
     .food-logo {
@@ -418,6 +432,15 @@ h2 {
 }
 
 @media (min-width:871px) and (max-width:1500px) {
+
+    .stats-btn__inner {
+        margin: 0;
+        position: absolute;
+    
+        left: 47%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 
     .food-logo {
         width: 5%;
