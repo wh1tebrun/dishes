@@ -23,7 +23,8 @@ function getRandomArbitrary(min, max) {
 
 imgs = Array.from(document.getElementsByTagName("img"))
 imgs = imgs.slice(2)
-vegetarisch = ["https://girlfriend-two.vercel.app/dishes/Linguine-allo-scoglio.jpg",
+vegetarisch = [
+    "https://girlfriend-two.vercel.app/dishes/Linguine-allo-scoglio.jpg",
     "https://girlfriend-two.vercel.app/dishes/Escondidinho.jpg",
     "https://girlfriend-two.vercel.app/dishes/Gambas-al-ajillo.jpg",
     "https://girlfriend-two.vercel.app/dishes/Phanaeng-Curry.jpg",
@@ -70,8 +71,10 @@ vegetarisch = ["https://girlfriend-two.vercel.app/dishes/Linguine-allo-scoglio.j
     "https://girlfriend-two.vercel.app/dishes/Gelato-al-pistacchio.jpg",
     "https://girlfriend-two.vercel.app/dishes/Chilaquiles.jpg",
     "https://girlfriend-two.vercel.app/dishes/Coxinha.jpg",
-    "https://girlfriend-two.vercel.app/dishes/Gyoza.jpg"]
-fleisch = ["dondurma.jpg",
+    "https://girlfriend-two.vercel.app/dishes/Gyoza.jpg"
+]
+fleisch = [
+    "https://girlfriend-two.vercel.app/dishes/dondurma.jpg",
     "https://girlfriend-two.vercel.app/dishes/Pan-de-bono.jpg",
     "https://girlfriend-two.vercel.app/dishes/Tom-kha-gai.jpg",
     "https://girlfriend-two.vercel.app/dishes/Picanha.jpg",
@@ -104,7 +107,8 @@ fleisch = ["dondurma.jpg",
     "https://girlfriend-two.vercel.app/dishes/Kleftiko.jpg",
     "https://girlfriend-two.vercel.app/dishes/Pecena-kachna.jpg",
     "https://girlfriend-two.vercel.app/dishes/Dakos.jpg",
-    "https://girlfriend-two.vercel.app/dishes/Pernil.jpg"]
+    "https://girlfriend-two.vercel.app/dishes/Pernil.jpg"
+]
 
 vegan = [
     "https://girlfriend-two.vercel.app/dishes/Chicken-65.jpg",
@@ -201,7 +205,7 @@ function downButton2() {
 // and then remove the used image source from imgsrcs
 function replaceAndRemoveImage(delIndex) {
     const rndNum = Math.floor(getRandomArbitrary(0, imgsrcs.length));
-    imgs[delIndex] = imgsrcs[rndNum];
+    imgs[delIndex].src = imgsrcs[rndNum];
     imgsrcs.splice(rndNum, 1);
 }
 
