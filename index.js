@@ -225,7 +225,7 @@ function removeImageListener(event) {
     const i = img._index;
     const delIndex = 1 - i;
 
-    dishName.textContent = img.src.slice(41, -4).replaceAll("-", " ").toUpperCase()
+    dishName.textContent = img.src.slice(40, -4).replaceAll("-", " ").toUpperCase()
     console.log(dishName.textContent)
 
 
