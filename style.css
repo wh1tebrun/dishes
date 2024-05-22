@@ -176,8 +176,8 @@ h2 {
     position: absolute;
 
     left: 48%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, 250%);
+    transform: translate(-50%, 250%);
 }
 
 .stats-btn__again {
@@ -212,8 +212,8 @@ h2 {
         position: absolute;
 
         left: 44%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, 250%);
+        transform: translate(-50%, 250%);
     }
 
 
@@ -305,8 +305,8 @@ h2 {
         position: absolute;
 
         left: 46%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, 250%);
+        transform: translate(-50%, 250%);
     }
 
 
@@ -409,8 +409,8 @@ h2 {
         position: absolute;
 
         left: 47%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, 250%);
+        transform: translate(-50%, 250%);
     }
 
     .food-logo {
